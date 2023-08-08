@@ -11,4 +11,7 @@ public interface CardRepository extends JpaRepository<CardEntity, Integer> {
     List<CardEntity> findAllByUserId(Integer userId);
     List<CardEntity> deleteCardEntitiesByUserId(Integer userId);
     CardEntity deleteCardEntityById(Integer id);
+    CardEntity findByUserId(Integer userId);
+
+    boolean existsCardEntityByCardNumber(String cardNumber);
 }
